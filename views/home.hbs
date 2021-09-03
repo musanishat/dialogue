@@ -1,0 +1,58 @@
+<div class = "x" id = "x">
+	╳
+</div>
+{{#each this.art}} 
+	<div class = "art">
+		<div class = "title">
+			{{title}}
+		</div>
+		
+		<div class = "image">
+			<ul><img src={{img.filename}}></ul> 
+		</div>
+		<div class = "title">
+			{{date}}
+		</div>
+		
+		<div class = "title">
+			<a href = "/home?filter=user&user={{artistId}}"><b>{{artist}}</b></a>
+		</div>
+		
+		<div class = "art-modal" id = {{_id}}>
+			<div class = "comments">
+				<h2>Comments</h2>
+				{{#each comments}}
+					<div class = "comment">
+						<div class = "com-text">
+							{{this.commentText}}
+						</div>
+						<div class = "com-poster">
+							<a href = "/home?filter=user&user={{this.posterId}}"><b>{{this.postedBy}}</b></a> - {{this.datePosted}}
+						</div>
+					</div>
+				{{/each}}
+			</div>
+			<div class = "post">
+				<div class="vote">
+					<a class="upvote">▲</a>
+					<span class="num">{{upvotes}}</span>
+					<a class="star">☆</a>
+				</div>
+				<div class = "modal-img">
+					<div class = "title">
+						{{title}}
+					</div>
+					<img src={{img.filename}}>
+					<div class = "leave-comment">
+						<input type="text" class="comment-text" name="title">
+						<input type="button" class = "create-comment" value="Comment">
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+{{/each}}
+
+
+
+<script src="index.js"></script>

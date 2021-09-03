@@ -1,0 +1,28 @@
+{
+  "name": "package.json",
+  "version": "1.0.0",
+  "description": "* See [example milestone #01](https://github.com/nyu-csci-ua-0480-008-spring-2017/final-project-example)\r * Add images to your repository and link / display with markdown",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/nyu-csci-ua-0480-034-spring-2021/musanishat-final-project.git"
+  },
+  "author": "Musa Nishat",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/nyu-csci-ua-0480-034-spring-2021/musanishat-final-project/issues"
+  },
+  "homepage": "https://github.com/nyu-csci-ua-0480-034-spring-2021/musanishat-final-project#readme",
+  "dependencies": {
+    "bcryptjs": "^2.4.3",
+    "express": "^4.17.1",
+    "express-handlebars": "^5.3.0",
+    "express-session": "^1.17.1",
+    "mongoose": "^5.12.2",
+    "mongoose-url-slugs": "^1.0.2",
+    "multer": "^1.4.2"
+  }
+}

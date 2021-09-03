@@ -1,0 +1,44 @@
+<!doctype html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>Dialogue</title>
+	<link rel="icon" href="https://www.freefavicon.com/freefavicons/people/female-face-152-275590.png">
+	<link rel="stylesheet" href="site.css" type="text/css" media="screen" title="no title" charset="utf-8">
+	<link rel="preconnect" href="https://fonts.gstatic.com">
+	<link href="https://fonts.googleapis.com/css2?family=Pinyon+Script&display=swap" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/css2?family=Mukta&display=swap" rel="stylesheet">
+</head>
+	
+<div class = "log">
+	{{#if user}}
+		{{user.username}}'s Dialogue 
+		<div class = 'user', id = {{user._id}}></div>
+		<div><a href = "/art/upload"><b>Post some art!</b></a></div>
+	{{else}}
+		<div><a href = "/login"><b>Login</b></a></div>
+		<div><a href = "/register"><b>Register</b></a></div>
+	{{/if}}
+
+	<form method="GET" action="home">
+		Filter
+		<select name="filter" id="filter">
+			<option value="recent">Recent</option>
+			<option value="top">Top</option>
+			{{#if user}}
+				<option value="favorites">Favorites</option>
+			{{/if}}
+		</select>
+		<input type="submit" value="Filter" class = 'filter'>
+	</form>
+</div>
+
+<div class="header">
+	<h1> <a href = "/home">Dialogue</a></h1>
+	<h2>"L'art ne peut pas être un monologue" - Albert Camus</h2>
+</div>
+
+<body>
+	{{{body}}}
+</body>
+</html>
